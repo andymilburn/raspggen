@@ -1,0 +1,7 @@
+#/bin/bash
+#
+# Raspberry Pi3 : Disable specific hardware
+#
+/usr/bin/hciconfig hci0 down
+exit 0
+

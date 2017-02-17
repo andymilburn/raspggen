@@ -1,0 +1,14 @@
+#/bin/bash
+#
+# Raspberry Pi3 : Enable specific hardware
+#
+# Note you need to download some firmwares :
+# wget https://github.com/OpenELEC/misc-firmware/raw/master/firmware/brcm/BCM43430A1.hcd -O /etc/firmware/BCM43430A1.hcd
+# wget https://github.com/RPi-Distro/firmware-nonfree/blob/master/brcm80211/brcm/brcmfmac43430-sdio.bin -O /lib/firmware/brcm/brcmfmac43430-sdio.bin
+# wget https://github.com/RPi-Distro/firmware-nonfree/blob/master/brcm80211/brcm/brcmfmac43430-sdio.txt -O /lib/firmware/brcm/brcmfmac43430-sdio.txt
+#
+#
+/usr/bin/hciattach /dev/ttyAMA0 bcm43xx 921600 noflow -
+/usr/bin/hciconfig hci0 up
+/usr/bin/hcitool dev
+exit 0
