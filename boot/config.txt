@@ -1,0 +1,16 @@
+# For more options and information see
+# http://www.raspberrypi.org/documentation/configuration/config-txt.md
+
+hdmi_force_hotplug=1
+start_x=1
+gpu_mem=256
+
+# 700 MHz is the default.
+arm_freq=800
+dtparam=i2c_arm=on
+dtparam=i2s=on
+dtparam=spi=on
+dtparam=audio=on
+
+#dtoverlay=lirc-rpi
+dtoverlay=vc4-kms-v3d,cma-256
